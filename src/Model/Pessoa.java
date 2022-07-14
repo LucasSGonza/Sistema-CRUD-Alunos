@@ -1,24 +1,24 @@
 package Model;
 
 public abstract class Pessoa {
-
-    // Atributos
+    
     private int id;
     private String nome;
     private int idade;
-
-    // Método Construtor de Objeto Vazio
-    public Pessoa() {
+    
+    
+    
+    public Pessoa(){        
     }
-
-    // Método Construtor de Objeto, inserindo dados
-    public Pessoa(int id, String nome, int idade) {
+    
+    public Pessoa (int id, String nome, int idade){
         this.id = id;
         this.nome = nome;
         this.idade = idade;
     }
-
-    // Métodos GET e SET
+       
+    
+    // MÃ©todos GET e SET
     public int getId() {
         return id;
     }
@@ -42,5 +42,5 @@ public abstract class Pessoa {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-
+    
 }

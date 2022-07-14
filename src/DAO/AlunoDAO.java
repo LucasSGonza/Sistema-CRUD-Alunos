@@ -1,26 +1,19 @@
-/*
- Aqui vamos simular a persist�ncia de dados.
- */
 package DAO;
 
 import Model.Aluno;
-import java.util.*;
+import java.util.ArrayList;
+
 
 public class AlunoDAO {
-
-    public static ArrayList<Aluno> MinhaLista = new ArrayList<Aluno>();
-
-    public static int maiorID() {
-        
-        int maiorID = 0;
-        for (int i = 0; i < MinhaLista.size(); i++) {
-            if (MinhaLista.get(i).getId() > maiorID) {
-                maiorID = MinhaLista.get(i).getId();
-            }
-        }
-        return maiorID;
-        
-        
+    
+    //Atributos
+    public static ArrayList<Aluno> listaAlunos = new ArrayList(); //static para ser a mesma ArrayList em cada instância
+    
+    //Métodos
+    public static int pegarID(){
+        int id = 0;
+        id = listaAlunos.size() + 1;       
+        return id;
     }
-
+    
 }
